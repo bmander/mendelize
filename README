@@ -1,0 +1,16 @@
+mendelize.py postprocesses cad.py .g files into a form that works well in the
+mendel.
+
+$ mendelize.py hello.g | gcdump
+
+actually, that doesn't work for some reason, though it should. the workaround is:
+
+$ mendelize.py hello.g > hello.mendel
+
+-- open hello.mendel, and copy the entire file
+-- run gcdump, which will give you an interactive console to dump gcode into the
+   mendel
+   
+$ gcdump
+
+-- then paste the gcode in there. It'll start going. Woo!
